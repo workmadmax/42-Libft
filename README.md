@@ -1,2 +1,5 @@
 # BasecampReload
-Lista com os mais importantes exercícios do Basecamp 42-SP
+List with the most important Basecamp 42-SP exercises.
+Well here we practice the exercises to enter with everything in the course of 42SP.
+
+AMAZING xD;
