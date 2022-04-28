@@ -6,11 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 15:15:23 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/22 15:38:20 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:26:19 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
 {

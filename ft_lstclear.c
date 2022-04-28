@@ -6,11 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 11:27:01 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/25 11:29:09 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:25:14 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 typedef struct ft_lstnew
 {

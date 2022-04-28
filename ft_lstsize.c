@@ -6,18 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 11:33:30 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/25 11:34:43 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:25:31 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-typedef struct ft_lstnew
-{
-    void            *content;
-    struct s_list   *next;
-    
-}t_list;
+#include "libft.h"
 
 int ft_lstsize(t_list *list)
 {

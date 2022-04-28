@@ -6,13 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 20:04:36 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/25 11:08:39 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:24:58 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 static char *ft_converse(char *str, size_t size,
                         unsigned int num,
@@ -29,7 +27,7 @@ static char *ft_converse(char *str, size_t size,
     return (str);
 }
 
-size_t  ft_intlen(int n)
+static size_t  ft_intlen(int n)
 {
     size_t len;
     

@@ -6,7 +6,7 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 09:15:12 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/27 09:27:26 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:26:23 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
     Retorna um ponteiro para a última ocorrencia do caractere em 'str'. Se não
     for encontrado valor retorna 'null'.
 */
+
+#include "libft.h"
 
 char    *ft_strrchr(const char *str, int c)
 {;

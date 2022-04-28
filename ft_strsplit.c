@@ -6,11 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 11:15:45 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/24 11:34:10 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:22:08 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 static char **create_str(char **split, const char *s,
 char c, size_t split_idx);

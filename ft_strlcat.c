@@ -6,11 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 18:11:38 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/23 18:36:21 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:26:05 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 size_t  ft_strlcat(char *dest, const char *src, size_t size)
 {

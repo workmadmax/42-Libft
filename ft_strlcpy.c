@@ -6,10 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 11:30:25 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/27 11:30:33 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:26:09 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 size_t  ft_strlcpy(char *dst, const char *src, size_t size)
 {

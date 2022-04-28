@@ -6,11 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 10:01:54 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/26 10:31:47 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:25:50 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 /*
     A função copia o caractere 'c'(um unsigned char) para os primeiros 'n' caracteres

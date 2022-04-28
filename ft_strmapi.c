@@ -6,9 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 12:16:07 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/23 12:19:00 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:26:16 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

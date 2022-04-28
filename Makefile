@@ -6,7 +6,7 @@
 #    By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/27 14:34:08 by jdutschk          #+#    #+#              #
-#    Updated: 2022/04/27 11:39:00 by mdouglas         ###   ########.fr        #
+#    Updated: 2022/04/27 18:15:57 by mdouglas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,44 +33,44 @@ LINK = ar rc
 
 #----------------------SOURCES FILES----------------------
 
-SRC_CHECK = check/ft_isalnum.c\
-	  		check/ft_isalpha.c\
-			check/ft_isdigit.c\
-			check/ft_isascii.c\
-	  		check/ft_isprint.c
+SRC_CHECK = ft_isalnum.c\
+	  		ft_isalpha.c\
+			ft_isdigit.c\
+			ft_isascii.c\
+	  		ft_isprint.c
 
-SRC_CONVERT = convert/ft_atoi.c\
-			  convert/ft_itoa.c\
-			  convert/ft_tolower.c\
-			  convert/ft_toupper.c
+SRC_CONVERT = ft_atoi.c\
+			  ft_itoa.c\
+			  ft_tolower.c\
+			  ft_toupper.c
 
-SRC_FD = fd_function/ft_putchar_fd.c\
-		 fd_function/ft_putnbr_fd.c\
-		 fd_function/ft_putendl_fd.c\
-		 fd_function/ft_putstr_fd.c
+SRC_FD = ft_putchar_fd.c\
+		 ft_putnbr_fd.c\
+		 ft_putendl_fd.c\
+		 ft_putstr_fd.c
 
-SRC_MEM = mem/ft_bzero.c\
-		  mem/ft_calloc.c\
-		  mem/ft_memchr.c\
-		  mem/ft_memcmp.c\
-		  mem/ft_memcpy.c\
-		  mem/ft_memmove.c\
-		  mem/ft_memset.c
+SRC_MEM = ft_bzero.c\
+		  ft_calloc.c\
+		  ft_memchr.c\
+		  ft_memcmp.c\
+		  ft_memcpy.c\
+		  ft_memmove.c\
+		  ft_memset.c
 
-SRC_STR = str/ft_strchr.c\
-		  str/ft_strdup.c\
-		  str/ft_striteri.c\
-		  str/ft_strlcat.c\
-		  str/ft_strlcpy.c\
-		  str/ft_strlen.c\
-		  str/ft_strncmp.c\
-		  str/ft_strnstr.c\
-		  str/ft_strrchr.c\
-		  str/ft_substr.c\
-		  str/ft_strtrim.c\
-		  str/ft_split.c\
-		  str/ft_strjoin.c\
-		  str/ft_strmapi.c
+SRC_STR = ft_strchr.c\
+		  ft_strdup.c\
+		  ft_striteri.c\
+		  ft_strlcat.c\
+		  ft_strlcpy.c\
+		  ft_strlen.c\
+		  ft_strncmp.c\
+		  ft_strnstr.c\
+		  ft_strrchr.c\
+		  ft_substr.c\
+		  ft_strtrim.c\
+		  ft_split.c\
+		  ft_strjoin.c\
+		  ft_strmapi.c
 
 ALL_SRC = $(SRC_CHECK)\
 		  $(SRC_CONVERT)\
@@ -86,17 +86,10 @@ all : start $(NAME)
 	@echo "$(CYAN)$(BOLD)Compilation terminer"
 
 start :
-	@echo "$(GREEN) $(BOLD)\n\
-	  _____           _   _                     _             \n\
- |_   _|   ___   | | | | __   __ _   _ __  (_)  _ __ ___  \n\
-   | |    / _ \  | | | |/ /  / _  | | '__| | | | '_   _ \ \n\
-   | |   | (_) | | | |   <  | (_| | | |    | | | | | | | |\n\
-   |_|    \___/  |_| |_|\_\  \__, | |_|    |_| |_| |_| |_|\n\
-                             |___/                        "
 	@echo "$(YELLOW)$(BOLD)\n\
 	⠀⠀⣰⣾⣿⣷⣶⣤⡀ \n\
 ⠀⠀⣿⣿⣿⣿⣿⣿⣿⣷⣄⡀ \n\
-⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\
+⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\
 ⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\
 ⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\
 ⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\

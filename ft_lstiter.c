@@ -6,16 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 11:30:43 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/25 11:31:47 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:25:22 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef struct ft_lstnew
-{
-    void            *content;
-    struct s_list   *next;
-    
-}t_list;
+#include "libft.h"
 
 void    ft_lstiter(t_list *list, void (*f)(void *))
 {

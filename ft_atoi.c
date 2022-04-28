@@ -6,11 +6,11 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 14:14:38 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/26 11:51:18 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:24:35 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 static int  ft_checkspace(char c)
 {
