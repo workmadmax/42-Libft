@@ -6,7 +6,7 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 10:01:54 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/29 10:56:46 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/29 12:16:36 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@
     Retorna um ponteiro para a área de memória 'str'.
 */
 
-void    *ft_memset(void *str, int c, size_t n)
+void    *ft_memset(void *s, int c, size_t n)
 {
     char        *aux;
     size_t      i;
 
-    aux = (char *)str;
+    aux = (char *)s;
     i = 0;
     while (i < n)
     {
         aux[i] = c;
         i++;
     }
-    return (str);
+    return (s);
 }
