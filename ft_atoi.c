@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/25 14:14:38 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/27 18:24:35 by mdouglas         ###   ########.fr       */
+/*   Created: 2022/04/29 10:50:40 by mdouglas          #+#    #+#             */
+/*   Updated: 2022/04/29 10:50:57 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ static int  ft_checkspace(char c)
         return (1);
     return (0);
 }
-
-int ft_isdigit(int c);
 
 int ft_atoi(const char *str)
 {
@@ -46,30 +44,4 @@ int ft_atoi(const char *str)
     if (neg)
         return (res * -1);
     return (res);
-}
-
-int ft_isdigit(int c)
-{
-    if (c >= '0' && c <= '9')
-        return (1);
-    else
-        return (0);
-}
-
-#include <stdio.h>
-
-int main()
-{
-    char    *str, *str2, *str3;
-    int     res, res2,res3;
-
-    str = "2147483647";
-    str2 = "-+214748364";
-    str3 = "";
-    res = ft_atoi(str);
-    res2 = ft_atoi(str2);
-    res3 = ft_atoi(str3);
-    printf(" MAX INT : %d\n", res);
-    printf(" MIN INT : %d\n", res2);
-    printf(" MIN INT : %d\n", res3);
 }

@@ -6,7 +6,7 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 10:01:54 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/27 18:25:50 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/04/29 10:56:46 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,4 @@ void    *ft_memset(void *str, int c, size_t n)
         i++;
     }
     return (str);
-}
-
-#include <stdio.h>
-
-int main()
-{
-    char    s[50] = "palmeiras";
-    char    s2[50] = "flango";
-    char    s3[7] = "tadala";
-    
-    ft_memset(s, '0', 5);
-    ft_memset(s2, '#', 6);
-    ft_memset(s3, '!', 6);
-    printf("%s\n", s);
-    printf("%s\n", s2);
-    printf("%s\n", s3);
 }
