@@ -6,55 +6,59 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 10:53:40 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/29 10:53:41 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/05/10 13:51:29 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char *ft_converse(char *str, size_t size,
-                        unsigned int num,
-                        unsigned int neg)
+static int	ft_count_digit(int n)
 {
-    str[size] = '\0';
-    while (size--)
-    {
-        str[size] = (num % 10) + 48;
-        num /= 10;
-    }
-    if (neg)
-        str[0] = '-';
-    return (str);
+	int	idx;
+
+	idx = 0;
+	if (n == 0)
+		return (1);
+	while (n != 0)
+	{
+		n = n / 10;
+		idx++;
+	}
+	return (idx);
 }
 
-static size_t  ft_intlen(int n)
+static char	*ft_printoa(int n, char *str, size_t len)
 {
-    size_t len;
-    
-    len = 1;
-    if (n < 0)
-    {
-        n /= 10;
-        len++;
-    }
-    return (len);
+	if (n == 0)
+		str[0] = '0';
+	else if (len == 1)
+		str[0] = '-';
+	return (str);
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    size_t          len_digit;
-    unsigned int    neg;
-    char            *str;
+	size_t		len;
+	char		*str;
+	long int	num;
 
-    len_digit = ft_intlen(n);
-    neg = 0;
-    if (n < 0)
-    {
-        neg = 1;
-        n *= -1;
-    }
-    str = malloc(sizeof(char) * (len_digit + 1));
-    if (str == NULL)
-        return (NULL);
-    return (ft_converse(str, len_digit, (unsigned int)n, neg));
+	num = n;
+	len = 0;
+	if (num < 0)
+	{
+		num = num * -1;
+		len = 1;
+	}
+	len = len + ft_count_digit(n);
+	str = malloc((len + 1));
+	if (str == 0)
+		return (0);
+	str[len] = '\0';
+	while (num > 0)
+	{
+		str[len -1] = num % 10 + '0';
+		num = num / 10;
+		len--;
+	}
+	return (ft_printoa(n, str, len));
 }
