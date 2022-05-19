@@ -6,23 +6,26 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:54:42 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/05/17 19:15:42 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/05/19 11:22:36 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
-
+#include <stdio.h>
+#include <limits.h>
+#include <fcntl.h>
+#include "get_next_line.h"
 
 int main()
 {
     int     fd;
     char    *str;
 
-    fd = open("teste.txt", O_RDONLY);
+    fd = open("teste", O_RDONLY);
     str = malloc(sizeof(char ) * BUFFER_SIZE);
     read(fd, str, BUFFER_SIZE);
-    printf("%ld\n", read(fd, str, BUFFER_SIZE));
-    printf("%s\n", s);
-    free(s);
+    printf(" Printando o 'buffer'%ld\n", read(fd, str, BUFFER_SIZE));
+    printf(" Printando a 'string' : \n%s\n", str);
+    free(str);
 }
