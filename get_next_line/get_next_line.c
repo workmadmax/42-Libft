@@ -6,7 +6,7 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:54:42 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/05/21 13:43:47 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/05/27 11:13:28 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ char    *get_string(char *str)
     while (str[i] && str[i] != '\n')
         i++;
     s_temp = (char *)malloc(sizeof(char) * (i + 2));
+
     if (!s_temp)
         return (NULL);
     i = 0;
@@ -58,7 +59,7 @@ char    *get_read(int fd, char *str)
             return (NULL);
         }
         s_temp[i] = '\0';
-        str = free_strjoin(str, s_temp);
+        str = gnl_strjoin(str, s_temp);
     }
     free(s_temp);
     return (str);
@@ -75,7 +76,7 @@ char    *get_next_line(int fd)
     if (!buf)
         return (NULL);
     str = get_string(buf);
-    buf = ft_strdup(buf);
+    buf = gnl_dup(buf);
     return (str);
 }
 
@@ -87,8 +88,8 @@ int main()
     fd = open("teste", O_RDONLY);
     printf(" Buffer > %d\n", BUFFER_SIZE);
     line = get_next_line(fd);
-    printf(" Printando a linha %s\n", line);
+    printf(" Printando a linha : %s\n", line);
     line = get_next_line(fd);
-    printf("linha rmk > %s\n", line);
+    printf(" Printando a linha rmk : %s\n", line);
     free(line);
 }

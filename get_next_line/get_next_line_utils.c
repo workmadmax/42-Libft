@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_util.c                               :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 21:34:21 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/05/21 13:43:45 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/05/27 11:12:28 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t    ft_strlen(char *str)
     size_t  i;
     
     i = 0;
+    if (!str)
+        return (0);
     while (str[i])
         i++;
     return (i);
@@ -42,7 +44,7 @@ char    *ft_strchr(char *str, int c)
     ft_strjoin() só que dando free na string 1
 */
 
-char    *free_strjoin(char *s1, char *s2)
+char    *gnl_strjoin(char *s1, char *s2)
 {
     unsigned int    i;
     unsigned int    j;
@@ -70,35 +72,28 @@ char    *free_strjoin(char *s1, char *s2)
     return (str);
 }
 
-size_t  ft_strlcpy(char *dest, char *src, size_t size)
+char    *gnl_dup(char *str)
 {
-    size_t  i;
+    char    *s_temp;
+    int     i;
+    int     j;
 
     i = 0;
-    if (size > 0)
-    {
-        while (src[i] && i < (size - 1))
-        {
-            dest[i] = src[i];
-            i++;
-        }
-        dest[i] = '\0';
-    }
-    while (src[i])
+    while (str[i] && str[i] != '\n')
         i++;
-    return (i);
-}
-
-char    *ft_strdup(char *s)
-{
-    char    *ret;
-    size_t  size;
-    
-    size = ft_strlen(s) + 1;
-    ret = (char *)malloc(size);
-    if (ret == NULL)
+    if (!str[i])
+    {
+        free(str);
         return (NULL);
-    ft_strlcpy(ret, s, size);
-    free(s);
-    return (ret);
+    }
+    s_temp = (char *)malloc(sizeof(char) * (ft_strlen(str) - i + 1));
+    if (!s_temp)
+        return (NULL);
+    i++;
+    j = 0;
+    while (str[i])
+        s_temp[j++] = str[i++];
+    str[j] = '\0';
+    free(str);
+    return (s_temp);
 }
