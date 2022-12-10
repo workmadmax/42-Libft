@@ -6,7 +6,7 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 11:33:30 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/27 18:25:31 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/12/10 11:17:32 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 int ft_lstsize(t_list *list)
 {
-    size_t  i;
-    
-    i = 0;
-    while (list)
+    int     count;
+    t_list  *temp;
+
+    temp = list;
+    count = 0;
+    while (temp != NULL)
     {
-        list = list->next;
-        i++;
+        count++;
+        temp = temp->next;
     }
-    return (i);
+    return (count);
 }

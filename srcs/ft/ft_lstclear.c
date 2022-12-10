@@ -6,7 +6,7 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 10:54:25 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/29 10:55:58 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/12/10 10:54:40 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@ void    ft_lstclear(t_list **list, void (*del)(void *))
 {
     t_list  *temp;
     
-    if (!list)
-        return ;
-    while ((*list))
+    while (*list != NULL)
     {
-        temp = (*list)->next;
-        ft_lstelone(*list, del);
-        (*list) = temp;
+        temp = *list;
+        *list = (*list)->next;
+        (*del)(temp->content);
+        free(temp);
     }
-    list = NULL;
 }

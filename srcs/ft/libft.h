@@ -6,7 +6,7 @@
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 21:29:34 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/08/06 17:03:38 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/12/10 11:17:03 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -448,7 +448,7 @@ t_list		*ft_lstnew(void *content);
  * @param lst The adress of a pointer to the first link of a list.
  * @param new The adress of a pointer to the element to be added to the list.
  */
-t_list		*ft_lstadd_front(t_list **lst, t_list *new);
+void    	ft_lstadd_front(t_list **list, t_list *new);
 
 /**
  * @brief Counts the number of elements in a list.
@@ -456,7 +456,7 @@ t_list		*ft_lstadd_front(t_list **lst, t_list *new);
  * @param lst The beginning of a list.
  * @return int Returns the length of a list.
  */
-int			*ft_lstsize(t_list *lst);
+int			ft_lstsize(t_list *lst);
 
 /**
  * @brief Returns the last element of the list.
@@ -523,5 +523,9 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
  * @return 't_list*' Returns the new list or NULL if the allocation fails.
  */
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/* gnl */
+
+char    *get_next_line(int fd);
 
 #endif

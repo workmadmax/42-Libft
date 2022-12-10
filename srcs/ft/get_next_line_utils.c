@@ -5,26 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/19 21:34:21 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/05/27 11:12:28 by mdouglas         ###   ########.fr       */
+/*   Created: 2022/06/10 18:43:08 by mdouglas          #+#    #+#             */
+/*   Updated: 2022/09/17 13:36:38 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "get_next_line.h"
 
-size_t    ft_strlen(char *str)
+size_t  gnl_strlen(char *str)
 {
     size_t  i;
     
     i = 0;
     if (!str)
         return (0);
-    while (str[i])
+    while (str[i] != '\0')
         i++;
     return (i);
 }
 
-char    *ft_strchr(char *str, int c)
+char    *gnl_strchr(char *str, int c)
 {
     int     i;
     char    x;
@@ -41,7 +42,7 @@ char    *ft_strchr(char *str, int c)
 }
 
 /*
-    ft_strjoin() só que dando free na string 1
+    strjoin with free s1 "string 1";
 */
 
 char    *gnl_strjoin(char *s1, char *s2)
@@ -57,13 +58,13 @@ char    *gnl_strjoin(char *s1, char *s2)
         s1 = (char *)malloc(sizeof(char));
         *s1 = '\0';
     }
-    str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
-    if (!s1 || !str)
+    str = malloc((gnl_strlen(s1) + gnl_strlen(s2) + 1) * sizeof(char));
+    if (!s2 || !str)
         return (NULL);
     while (s1[i] != '\0')
     {
         str[i] = s1[i];
-        i++;
+        i++; 
     }
     while (s2[j] != '\0')
         str[i++] = s2[j++];
@@ -72,9 +73,13 @@ char    *gnl_strjoin(char *s1, char *s2)
     return (str);
 }
 
+/*
+    strdup with free 'str'
+*/
+
 char    *gnl_dup(char *str)
 {
-    char    *s_temp;
+    char    *dup;
     int     i;
     int     j;
 
@@ -86,14 +91,14 @@ char    *gnl_dup(char *str)
         free(str);
         return (NULL);
     }
-    s_temp = (char *)malloc(sizeof(char) * (ft_strlen(str) - i + 1));
-    if (!s_temp)
+    dup = (char *)malloc(sizeof(char) * (gnl_strlen(str) - i + 1));
+    if (!dup)
         return (NULL);
     i++;
     j = 0;
     while (str[i])
-        s_temp[j++] = str[i++];
-    str[j] = '\0';
+        dup[j++] = str[i++];
+    dup[j] = '\0';
     free(str);
-    return (s_temp);
+    return (dup);
 }

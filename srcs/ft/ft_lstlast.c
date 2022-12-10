@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_listlast.c                                      :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdouglas <mdouglas@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 10:53:52 by mdouglas          #+#    #+#             */
-/*   Updated: 2022/04/29 10:53:55 by mdouglas         ###   ########.fr       */
+/*   Updated: 2022/12/10 11:01:05 by mdouglas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 t_list  *ft_lstlast(t_list *list)
 {
-    if (!list)
+    t_list  *temp;
+    
+    if (list == NULL)
         return (NULL);
-    while (list->next)
-        list = list->next;
-    return (list);
+    temp = list;
+    while (temp->next != NULL)
+        temp = temp->next;
+    return (temp);
 }
